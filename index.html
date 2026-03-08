@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mercy Adebiyi | Portfolio</title>
+    <meta
+      name="description"
+      content="Modern personal portfolio website for a software and web developer."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Loading screen shown briefly while content initializes -->
+    <div class="loader" id="loader">
+      <div class="loader-ring"></div>
+      <p>Loading Portfolio...</p>
+    </div>
+
+    <!-- Backdrop blobs for subtle motion and depth -->
+    <div class="global-bg" aria-hidden="true">
+      <span class="blob blob-1"></span>
+      <span class="blob blob-2"></span>
+      <span class="blob blob-3"></span>
+    </div>
+
+    <!-- Sticky navigation for fast section access -->
+    <header class="site-header" id="top">
+      <nav class="navbar container">
+        <a href="#home" class="logo">AC<span>.</span></a>
+
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="navMenu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-links" id="navMenu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero section with typing animation and CTA -->
+      <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <p class="hero-kicker reveal">Hello, I am</p>
+          <h1 class="reveal">Mercy Adebiyi</h1>
+          <h2 class="hero-role reveal">
+            <span id="typed-text"></span><span class="cursor">|</span>
+          </h2>
+          <p class="hero-description reveal">
+            I build fast, user-friendly, and scalable digital experiences with
+            clean architecture and modern design.
+          </p>
+          <a href="#projects" class="btn btn-primary reveal">View My Work</a>
+        </div>
+        <div class="hero-shapes" aria-hidden="true">
+          <span class="shape shape-a"></span>
+          <span class="shape shape-b"></span>
+        </div>
+      </section>
+
+      <!-- About section with photo, bio, and skills -->
+      <section class="section about" id="about">
+        <div class="container about-grid">
+          <div class="about-image reveal">
+            <img
+              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80"
+              alt="Portrait of Mercy Adebiyi"
+            />
+          </div>
+
+          <div class="about-content">
+            <h2 class="section-title reveal">About Me</h2>
+            <p class="reveal">
+              I am a software and web developer focused on creating polished web
+              products that combine performance, accessibility, and strong
+              visual identity. I enjoy turning complex ideas into practical,
+              high-quality solutions.
+            </p>
+
+            <div class="skills-icons reveal" aria-label="Core skills">
+              <span><i class="fa-brands fa-html5"></i> HTML</span>
+              <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+              <span><i class="fa-brands fa-js"></i> JavaScript</span>
+              <span><i class="fa-brands fa-git-alt"></i> Git</span>
+              <span><i class="fa-brands fa-node-js"></i> Node.js</span>
+            </div>
+
+            <div class="skill-bars reveal">
+              <div class="skill">
+                <div class="skill-top">
+                  <span>HTML/CSS</span><span>95%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-level="95"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-top">
+                  <span>JavaScript</span><span>90%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-level="90"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-top"><span>UI/UX</span><span>85%</span></div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-level="85"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="skill-top">
+                  <span>Data Analysis</span><span>80%</span>
+                </div>
+                <div class="skill-track">
+                  <div class="skill-fill" data-level="80"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects section with interactive cards -->
+      <section class="section projects" id="projects">
+        <div class="container">
+          <h2 class="section-title reveal">Projects</h2>
+          <div class="project-grid">
+            <article class="project-card reveal">
+              <img
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=80"
+                alt="Project analytics dashboard"
+              />
+              <div class="project-content">
+                <h3>Analytics Dashboard</h3>
+                <p>
+                  A responsive dashboard with chart-driven insights, filtering,
+                  and real-time updates.
+                </p>
+                <div class="project-links">
+                  <a href="#" class="btn btn-secondary">Live Demo</a>
+                  <a href="#" class="btn btn-ghost">GitHub</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <img
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80"
+                alt="Project e-commerce website"
+              />
+              <div class="project-content">
+                <h3>E-Commerce Platform</h3>
+                <p>
+                  Modern storefront with product search, smart cart flow, and
+                  clean checkout UX.
+                </p>
+                <div class="project-links">
+                  <a href="#" class="btn btn-secondary">Live Demo</a>
+                  <a href="#" class="btn btn-ghost">GitHub</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <img
+                src="https://images.unsplash.com/photo-1526378722484-bd91ca387e72?auto=format&fit=crop&w=1000&q=80"
+                alt="Project portfolio redesign"
+              />
+              <div class="project-content">
+                <h3>Portfolio Redesign</h3>
+                <p>
+                  High-performance portfolio system with animations, reusable
+                  components, and SEO improvements.
+                </p>
+                <div class="project-links">
+                  <a href="#" class="btn btn-secondary">Live Demo</a>
+                  <a href="#" class="btn btn-ghost">GitHub</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Timeline section for experience -->
+      <section class="section experience" id="experience">
+        <div class="container">
+          <h2 class="section-title reveal">Experience</h2>
+          <div class="timeline">
+            <article class="timeline-item reveal">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>Senior Web Developer</h3>
+                <span>2024 - Present</span>
+                <p>
+                  Led front-end architecture and shipped responsive,
+                  component-based products for enterprise clients.
+                </p>
+              </div>
+            </article>
+
+            <article class="timeline-item reveal">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>UI Engineer</h3>
+                <span>2022 - 2024</span>
+                <p>
+                  Built reusable design systems and implemented interactive
+                  interfaces with accessibility-first practices.
+                </p>
+              </div>
+            </article>
+
+            <article class="timeline-item reveal">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>Junior Developer</h3>
+                <span>2020 - 2022</span>
+                <p>
+                  Developed landing pages, marketing sites, and internal tools
+                  with strong performance standards.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services section with card hover animation -->
+      <section class="section services" id="services">
+        <div class="container">
+          <h2 class="section-title reveal">Services</h2>
+          <div class="services-grid">
+            <article class="service-card reveal">
+              <i class="fa-solid fa-code"></i>
+              <h3>Web Development</h3>
+              <p>
+                Custom websites and web apps with clean code, modern frameworks,
+                and scalable architecture.
+              </p>
+            </article>
+
+            <article class="service-card reveal">
+              <i class="fa-solid fa-pen-ruler"></i>
+              <h3>UI Design</h3>
+              <p>
+                High-conversion interface design focused on usability, visual
+                hierarchy, and consistency.
+              </p>
+            </article>
+
+            <article class="service-card reveal">
+              <i class="fa-solid fa-chart-line"></i>
+              <h3>Data Analysis</h3>
+              <p>
+                Actionable insights from data with dashboards, reporting
+                automation, and trend monitoring.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact section with validated form -->
+      <section class="section contact" id="contact">
+        <div class="container">
+          <h2 class="section-title reveal">Contact</h2>
+          <form class="contact-form reveal" id="contactForm" novalidate>
+            <div class="field">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your full name"
+              />
+              <small class="error" id="nameError"></small>
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+              />
+              <small class="error" id="emailError"></small>
+            </div>
+
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Tell me about your project"
+              ></textarea>
+              <small class="error" id="messageError"></small>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <p class="form-success" id="formSuccess" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer with social links and dynamic year -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="socials">
+          <a href="#" aria-label="LinkedIn"
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
+          <a href="#" aria-label="GitHub"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a href="#" aria-label="Twitter"
+            ><i class="fa-brands fa-x-twitter"></i
+          ></a>
+        </div>
+        <p>
+          &copy; <span id="year"></span> Mercy Adebiyi. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Back to top shortcut -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!-- docker run hello-world -->
+<!-- docker run -p 8080:80 nginx -->
